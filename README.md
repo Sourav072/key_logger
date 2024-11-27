@@ -14,6 +14,8 @@ A Python-based keylogger that logs keystrokes and sends them to a Telegram chat 
 
 Follow these steps to install and run the keylogger project:
 
+### On Windows
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/Sourav072/key_logger.git
@@ -30,9 +32,9 @@ Follow these steps to install and run the keylogger project:
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-4. Install the required dependencies:
+4. Install the required dependencies from `requirements.txt`:
    ```bash
-   pip install pynput requests
+   pip install -r requirements.txt
    ```
 
 5. Configure the script by replacing `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` with your Telegram bot token and chat ID in the script file.
@@ -42,11 +44,41 @@ Follow these steps to install and run the keylogger project:
    python keylogger.py
    ```
 
+### On Linux
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sourav072/key_logger.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd key_logger
+   ```
+
+3. Create and activate a virtual environment (optional but recommended):
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+4. Install the required dependencies from `requirements.txt`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. Configure the script by replacing `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` with your Telegram bot token and chat ID in the script file.
+
+6. Run the application:
+   ```bash
+   python3 keylogger.py
+   ```
+
 ## Usage
 
 - The keylogger logs all keystrokes and saves them to a local file (`google.txt`).
 - It sends the logged data to a specified Telegram chat at regular intervals (default: every 60 seconds).
-- To stop the keylogger, press the `Esc` || `Cntrl + c` key.
+- To stop the keylogger, press the `Esc` key.
 
 ## Features
 
